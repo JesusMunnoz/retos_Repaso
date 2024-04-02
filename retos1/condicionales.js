@@ -1,3 +1,4 @@
+"use strict";
 /*
 Aries 21 03 - 19 04
 Tauro 20 04 - 20 05
@@ -12,6 +13,9 @@ Capricornio 22 12 - 19 01
 Acuario 20 01 - 18 02
 Piscis 19 02 - 20 03
 */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.isEven = void 0;
+//2
 function zodiac(day, month) {
     if ((day >= 21 && month == 3) || (day <= 19 && month == 4)) {
         return "Aries";
@@ -51,6 +55,7 @@ function zodiac(day, month) {
     }
 }
 console.log(zodiac(14, 6));
+//3
 function continent(country) {
     if ((country == "Spain") || (country == "England") || (country == "Ireland") || (country == "Portugal") || (country == "Andorra")) {
         return "Europe";
@@ -77,6 +82,7 @@ console.log(continent("Argentina"));
 console.log(continent("Papua"));
 console.log(continent("Jamaica"));
 console.log(continent("Angola"));
+//4
 function isEven(number) {
     if (number % 2 == 0) {
         return "El numero ".concat(number, " es par.");
@@ -85,5 +91,6 @@ function isEven(number) {
         return "El numero ".concat(number, " es impar.");
     }
 }
+exports.isEven = isEven;
 console.log(isEven(6));
 console.log(isEven(3));

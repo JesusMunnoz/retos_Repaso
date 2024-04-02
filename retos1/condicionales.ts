@@ -13,6 +13,7 @@ Acuario 20 01 - 18 02
 Piscis 19 02 - 20 03
 */
 
+//2
 function zodiac (day:number, month:number){
     if ((day >= 21 && month == 3) || (day <= 19 && month == 4)){
         return "Aries";
@@ -54,6 +55,7 @@ function zodiac (day:number, month:number){
 
 console.log(zodiac(14, 6));
 
+//3
 function continent(country){
     if ((country == "Spain")||(country == "England")||(country == "Ireland")||(country == "Portugal")||(country == "Andorra")){
         return "Europe";
@@ -82,7 +84,8 @@ console.log(continent("Papua"));
 console.log(continent("Jamaica"));
 console.log(continent("Angola"));
 
-function isEven(number) {
+//4
+export function isEven(number) {
     if (number % 2 == 0 ){
         return `El numero ${number} es par.`;
     }

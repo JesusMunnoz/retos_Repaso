@@ -9,6 +9,7 @@
 }
 console.log(evenNumbers(19));*/
 
+//2
 function evenNumbers(num): void{
     for (let i = 0; i <= num; i++){
         if (i % 2 == 0){
@@ -18,6 +19,7 @@ function evenNumbers(num): void{
 }
 evenNumbers(19);
 
+//3
 function myRevert(myArr: string[]): string[]{
     let newArr : string[] = [];
     console.log(myArr.length);
@@ -29,8 +31,9 @@ function myRevert(myArr: string[]): string[]{
 }
 console.log(myRevert(["Jesus", "Munnoz", "Post"]));
 
+//4
 function isRainbow(color: string[]):string{
-    let rainbow : string[] = ["rojo", "naranja", "ammarillo", "verde", "añil", "azul", "violeta"];
+    let rainbow : string[] = ["rojo", "naranja", "amarillo", "verde", "añil", "azul", "violeta"];
     let yesRB : string[] = [];
     let noRB : string[] = [];
     for (let i = 0; i < rainbow.length; i++){
@@ -39,7 +42,7 @@ function isRainbow(color: string[]):string{
             if (rainbow[i] == color[j]){
                 yesRB.push(color[j]);
             }
-            //Me Imprime todos los colores
+            //No imprime el primero pero me Imprime todos los colores  ¿?
             else if (!color.indexOf(rainbow[i])) {
                 noRB.push(color[j]);
             }
@@ -49,16 +52,14 @@ function isRainbow(color: string[]):string{
     return(`Los colores del arco iris son ${yesRB}.\nLos colores que no se encuentran en el arco iris son ${noRB}.`);
     
 }
-console.log(isRainbow(["naranja", "cian", "magenta", "rojo"]));
+console.log(isRainbow(["naranja", "cian", "magenta", "rojo", "madera", "burdeos", "camel"]));
 
-function hasEven(myNums: number[]) {
-
-    let i = 0;
-    while (i < myNums.length){
-        if (myNums[i] % 2 == 0 ){
-            console.log("el numero en la posición " + i + " es par");
-        }
-        i++;
+//5
+export function add (myWords: string[]) : number{
+    let contador : number = 0;
+    for (let i = 0; i < myWords.length; i++){
+        contador += myWords[i].length;
     }
+    return contador;
 }
-hasEven([1, 2, 3, 4, 5, 6, 8, 11, 14]);
+console.log(add(["casa", "palo", "mesa", "pala"]));
