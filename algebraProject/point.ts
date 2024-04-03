@@ -115,9 +115,9 @@ export class Point {
     }*/
 }
 
-let myPoint : Point = new Point (7,3);
+/*let myPoint : Point = new Point (7,3);
 console.log(myPoint.toString());
-console.log(myPoint.distanceTolOrigin());
+console.log(myPoint.distanceTolOrigin());*/
 
 /*let anotherPoint : Point = new Point (-4, 8);
 console.log(anotherPoint.toString());
