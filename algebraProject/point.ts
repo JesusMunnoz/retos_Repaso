@@ -51,6 +51,32 @@ export class Point {
         return d;
     }
 
+    public calcularQuadrant()/*: number*/{
+        let quadrant: number;
+        if (this.x == 0 || this.y == 0){
+            quadrant = 0;
+            return quadrant;
+        }
+        else if (this.x > 0 && this.y > 0){
+            quadrant = 1;
+            return quadrant;
+        }
+        else if (this.x < 0 && this.y > 0){
+            quadrant = 2;
+            return quadrant;
+        }
+        else if (this.x < 0 && this.y < 0){
+            quadrant = 3;
+            return quadrant;
+        }
+        else if (this.x > 0 && this.y < 0){
+            quadrant = 4;
+            return quadrant;
+        }
+    }
+
+    
+
 }
 
 /*let myPoint : Point = new Point (7,3);
@@ -59,4 +85,6 @@ console.log(myPoint.distanceTolOrigin());
 
 let anotherPoint : Point = new Point (-4, 8);
 console.log(anotherPoint.toString());
-console.log(myPoint.calculateDistance(anotherPoint));*/
+console.log(myPoint.calculateDistance(anotherPoint));
+
+console.log(myPoint.calcularQuadrant());*/
