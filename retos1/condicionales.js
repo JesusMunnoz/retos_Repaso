@@ -17,64 +17,68 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.isEven = void 0;
 //2
 function zodiac(day, month) {
+    var signoZodiacal;
     if ((day >= 21 && month == 3) || (day <= 19 && month == 4)) {
-        return "Aries";
+        signoZodiacal = "Aries";
     }
     else if ((day >= 20 && month == 4) || (day <= 20 && month == 5)) {
-        return "Tauro";
+        signoZodiacal = "Tauro";
     }
     else if ((day >= 21 && month == 5) || (day <= 20 && month == 6)) {
-        return "Geminis";
+        signoZodiacal = "Geminis";
     }
     else if ((day >= 21 && month == 6) || (day <= 22 && month == 7)) {
-        return "Cancer";
+        signoZodiacal = "Cancer";
     }
     else if ((day >= 23 && month == 7) || (day <= 22 && month == 8)) {
-        return "Leo";
+        signoZodiacal = "Leo";
     }
     else if ((day >= 23 && month == 8) || (day <= 22 && month == 9)) {
-        return "Virgo";
+        signoZodiacal = "Virgo";
     }
     else if ((day >= 23 && month == 9) || (day <= 24 && month == 10)) {
-        return "Libra";
+        signoZodiacal = "Libra";
     }
     else if ((day >= 25 && month == 10) || (day <= 21 && month == 11)) {
-        return "Escorpio";
+        signoZodiacal = "Escorpio";
     }
     else if ((day >= 22 && month == 11) || (day <= 21 && month == 12)) {
-        return "Sagitario";
+        signoZodiacal = "Sagitario";
     }
     else if ((day >= 22 && month == 12) || (day <= 19 && month == 1)) {
-        return "Capricornio";
+        signoZodiacal = "Capricornio";
     }
     else if ((day >= 20 && month == 1) || (day <= 18 && month == 2)) {
-        return "Acuario";
+        signoZodiacal = "Acuario";
     }
     else if ((day >= 19 && month == 2) || (day <= 20 && month == 3)) {
-        return "Piscis";
+        signoZodiacal = "Piscis";
     }
+    return signoZodiacal;
 }
 console.log(zodiac(14, 6));
 //3
 function continent(country) {
+    var pais;
     if ((country == "Spain") || (country == "England") || (country == "Ireland") || (country == "Portugal") || (country == "Andorra")) {
-        return "Europe";
+        pais = "Europe";
     }
     else if ((country == "Republic of India") || (country == "People's Republic of China") || (country == "Republic of Corea") || (country == "Japan") || (country == "Israel")) {
-        return "Asia";
+        pais = "Asia";
     }
     else if ((country == "Republic of Cuba") || (country == "Jamaica") || (country == "United Mexican States") || (country == "United States") || (country == "Canada")) {
-        return "North America";
+        pais = "North America";
     }
     else if ((country == "Argentina") || (country == "Federative Republic of Brazil") || (country == "Peru") || (country == "Bolivarian Republic of Venezuela") || (country == "Republic of Colombia")) {
-        return "South America";
+        pais = "South America";
     }
     else if ((country == "Fiji") || (country == "New Zeland") || (country == "Federated States of Micronesia") || (country == "Papua") || (country == "Samoa")) {
-        return "Oceania";
+        pais = "Oceania";
     }
     else if ((country == "Algeria") || (country == "Angola") || (country == "Benin") || (country == "Botswana") || (country == "Burkina Faso")) {
-        return "Africa";
+        pais = "Africa";
     }
+    return pais;
 }
 console.log(continent("Ireland"));
 console.log(continent("Japan"));
@@ -84,12 +88,14 @@ console.log(continent("Jamaica"));
 console.log(continent("Angola"));
 //4
 function isEven(number) {
+    var queEs;
     if (number % 2 == 0) {
-        return "El numero ".concat(number, " es par.");
+        queEs = "El numero ".concat(number, " es par.");
     }
     else {
-        return "El numero ".concat(number, " es impar.");
+        queEs = "El numero ".concat(number, " es impar.");
     }
+    return queEs;
 }
 exports.isEven = isEven;
 console.log(isEven(6));
