@@ -83,54 +83,40 @@ export class Point {
     }
 
     // -- 4 -- 
-    /*public calculateNearest(points: Point[]): Point{
+    public calculateNearest(points: Point[]): Point{
         
-        let closerPoint : Point = new Point (0,0);
-        let lowerDistance : number = 0;
+        let closerPoint : Point = points[0];
+        let lowerDistance : number = this.calculateDistance(closerPoint);
 
-        for (let i = 0; points.length; i++){
-            let point = points[i]
-            let distances : number[] = [];
+        for (let i = 0; i < points.length; i++){
+            let currentDistance: number;
+            currentDistance = this.calculateDistance(points[i]);
 
-            //distances > array de distancias de points
-            distances.push(this.calculateDistance(point));
-
-            //distances > saber cual es que menor valor tiene
-            //y saber su posición que coincidira con la posicion del array points
-            for (let i = 0; i < distances.length; i++){
-                let acum : number;
-                let localizador : number;
-                if (acum <= distances[i]){
-                    acum = distances[i];
-                    localizador = i;
-                }
+            if (currentDistance < lowerDistance){
+                closerPoint = points[i];
+                lowerDistance = currentDistance;
             }
-
-            //if (lowerDistance == 0 || distance < lowerDistance){
-                //lowerDistance = distance;
-                //closerPoint = point;
-            //}
         }
         return closerPoint;
-    }*/
+    }
 }
 
 /*let myPoint : Point = new Point (7,3);
 console.log(myPoint.toString());
-console.log(myPoint.distanceTolOrigin());*/
+console.log(myPoint.distanceTolOrigin());
 
-/*let anotherPoint : Point = new Point (-4, 8);
+let anotherPoint : Point = new Point (-4, 8);
 console.log(anotherPoint.toString());
 console.log(myPoint.calculateDistance(anotherPoint));
 
 console.log(myPoint.calcularQuadrant());*/
 
-/*let p1 : Point = new Point (2,-4);
+//4
+/*console.log("");
+
+let p1 : Point = new Point (2,-4);
 let p2 : Point = new Point (8,5);
 let p3 : Point = new Point (-7,-2);
 //console.log(myPoint.calculateNearest([p1, p2, p3]));
 let arr: Point [] = [p1, p2, p3];
 console.log(myPoint.calculateNearest(arr));*/
-
-
-

@@ -44,3 +44,12 @@ console.log(myPoint4.calcularQuadrant());
 console.log(myPoint5.calcularQuadrant());
 console.log(myPoint6.calcularQuadrant());
 console.log(anotherPoint.calcularQuadrant());
+
+// -- 4 -- 
+console.log("");
+let p1 : Point = new Point (2,-4);
+let p2 : Point = new Point (8,5);
+let p3 : Point = new Point (-7,-2);
+console.log(myPoint.calculateNearest([p1, p2, p3]));
+let arr: Point [] = [p1, p2, p3];
+console.log(myPoint.calculateNearest(arr));
